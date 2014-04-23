@@ -20,6 +20,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 from collections import OrderedDict
 from copy import deepcopy
 import functools
+import logging
 
 from django.views.generic.base import View
 from django.http import HttpResponseForbidden, HttpResponseNotFound
@@ -34,9 +35,10 @@ from django.template.response import ContentNotRenderedError
 
 from .mixins.multi_format_response import MultiFormatResponseMixin
 from asymmetricbase.utils.exceptions import DeveloperTODO, ForceRollback
-from asymmetricbase.logging import logger #@UnusedImport
 from asymmetricbase.jinja import jinja_env
 from asymmetricbase.utils.permissions import create_codename, default_content_type_appname
+
+logger = logging.getLogger(getattr(settings, 'ASYM_LOGGER', 'asymm_logger'))
 
 class AsymBaseView(MultiFormatResponseMixin, View):
 	""" Base class for all views """

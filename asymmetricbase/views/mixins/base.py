@@ -17,7 +17,6 @@
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from asymmetricbase.logging import logger #@UnusedImport
 from asymmetricbase.views.mixins.merge_attr import MergeAttrMixin
 
 class AsymBaseMixin(MergeAttrMixin):

@@ -24,9 +24,10 @@ from django.http import HttpResponse
 from django.utils.http import urlquote
 from django.conf import settings
 
+
+from .merge_attr import MergeAttrMixin
+
 from asymmetricbase.jinja.response import JinjaTemplateResponse
-from asymmetricbase.views.mixins.merge_attr import MergeAttrMixin
-from asymmetricbase.logging import logger # @UnusedImport
 from asymmetricbase.utils.jsonencoder import AsymJSONEncoder, AsymJSTreeEncoder
 from asymmetricbase.utils.resources import ResourceSet
 

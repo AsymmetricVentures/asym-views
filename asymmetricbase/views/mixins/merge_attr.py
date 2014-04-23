@@ -21,8 +21,6 @@ from collections import OrderedDict
 
 from django.dispatch import Signal
 
-from asymmetricbase.logging import logger #@UnusedImport
-
 pre_merge = Signal(providing_args = ['instance', 'attr'])
 post_merge = Signal(providing_args = ['instance', 'attr', 'merged'])
 

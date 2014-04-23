@@ -48,9 +48,11 @@ setup(
 		'pytz',  # most recent
 		
 		'asymmetricbase.utils',
+		'asymmetricbase.jinja',
 	),
 	dependency_links = [
 		'https://github.com/AsymmetricVentures/asym-utils.git#egg=asymmetricbase.utils',
+		'https://github.com/AsymmetricVentures/asym-jinja.git#egg=asymmetricbase.jinja',
 	],
 	package_dir = {
 		'asymmetricbase' : 	'asymmetricbase',
