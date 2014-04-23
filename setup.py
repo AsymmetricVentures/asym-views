@@ -34,7 +34,7 @@ Topic :: Software Development :: Libraries :: Application Frameworks
 setup(
 	name = 'asymmetricbase.views',
 	version = datetime.now().strftime('%Y%m%d%H%M'),
-	url = 'https://github.com/AsymmetricVentures/asymmetricbase',
+	url = 'https://github.com/AsymmetricVentures/asym-views',
 	
 	author = 'Richard Eames',
 	author_email = 'reames@asymmetricventures.com',
@@ -48,8 +48,10 @@ setup(
 		'pytz',  # most recent
 		
 		'asymmetricbase.utils',
-		
 	),
+	dependency_links = [
+		'https://github.com/AsymmetricVentures/asym-utils.git#egg=asymmetricbase.utils',
+	],
 	package_dir = {
 		'asymmetricbase' : 	'asymmetricbase',
 	},
