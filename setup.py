@@ -31,16 +31,23 @@ License :: OSI Approved :: GNU General Public License v2 (GPLv2)
 Topic :: Software Development :: Libraries :: Application Frameworks
 """
 
+version = '0.1.0'
+url = 'https://github.com/AsymmetricVentures/asym-views'
+
 setup(
 	name = 'asymmetricbase.views',
-	version = datetime.now().strftime('%Y%m%d%H%M'),
-	url = 'https://github.com/AsymmetricVentures/asym-views',
+	version = '{}-{}'.format(version, datetime.now().strftime('%Y%m%d%H%M')),
+	url = url,
+	download_url = '{}/archive/v{}.tar.gz'.format(url, version),
 	
 	author = 'Richard Eames',
 	author_email = 'reames@asymmetricventures.com',
 	packages = find_packages(),
-	classifiers = filter(None, classifiers.split('\n')),
+	classifiers = list(filter(None, classifiers.split('\n'))),
 	namespace_packages = ['asymmetricbase'],
+	
+	license = 'GPLv2',
+	description = 'Base views for Django',
 	
 	install_requires = (
 		'django>=1.4.5',
@@ -50,10 +57,6 @@ setup(
 		'asymmetricbase.utils',
 		'asymmetricbase.jinja',
 	),
-	dependency_links = [
-		'https://github.com/AsymmetricVentures/asym-utils.git#egg=asymmetricbase.utils',
-		'https://github.com/AsymmetricVentures/asym-jinja.git#egg=asymmetricbase.jinja',
-	],
 	package_dir = {
 		'asymmetricbase' : 	'asymmetricbase',
 	},
